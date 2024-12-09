@@ -1,3 +1,140 @@
+// "use client"
+// import React, { useState, useEffect } from 'react';
+// import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+// import Image from 'next/image';
+// const products = [
+//   {
+//     id: 1,
+//     image: '/j1.png',
+//     title: 'Nike Dri-FIT ADV TechKnit Ultra',
+//     price: '$39.95',
+//     category: 'Men\'s Short-Sleeve Running Top',
+//   },
+//   {
+//     id: 2,
+//     image: '/j2.png',
+//     title: 'Nike Dri-FIT Challenger',
+//     price: '$24.95',
+//     category: 'Men\'s 7" Lined Shorts',
+//   },
+//   {
+//     id: 3,
+//     image: '/j3.png',
+//     title: 'Nike Dri-FIT ADV Run Division',
+//     price: '$52.95',
+//     category: 'Women\'s Long-Sleeve Running Top',
+//   },
+//   {
+//     id: 4,
+//     image: '/j4.png',
+//     title: 'Nike Fast',
+//     price: '$37.95',
+//     category: 'Women\'s Mid-Rise/7/8 Running Leggings with Pockets',
+//   },{
+//     id: 5,
+//     image: '/j1.png',
+//     title: 'Nike Dri-FIT ADV TechKnit Ultra',
+//     price: '$39.95',
+//     category: 'Men\'s Short-Sleeve Running Top',
+//   },
+//   {
+//     id: 6,
+//     image: '/j2.png',
+//     title: 'Nike Dri-FIT Challenger',
+//     price: '$24.95',
+//     category: 'Men\'s 7" Lined Shorts',
+//   },
+//   {
+//     id: 7,
+//     image: '/j3.png',
+//     title: 'Nike Dri-FIT ADV Run Division',
+//     price: '$52.95',
+//     category: 'Women\'s Long-Sleeve Running Top',
+//   },
+//   {
+//     id: 8,
+//     image: '/j4.png',
+//     title: 'Nike Fast',
+//     price: '$37.95',
+//     category: 'Women\'s Mid-Rise/7/8 Running Leggings with Pockets',
+//   },
+// ];
+// const JordanSlider: React.FC = () => {
+//   const [currentIndex, setCurrentIndex] = useState(0);
+
+//   const handlePrevious = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === 0 ? products.length - 1 : prevIndex - 1
+//     );
+//   };
+
+//   const handleNext = () => {
+//     setCurrentIndex((prevIndex) =>
+//       prevIndex === products.length - 1 ? 0 : prevIndex + 1
+//     );
+//   };
+
+//   return (
+//     <div className="relative mt-10 px-10">
+//       <div className="overflow-hidden">
+//         <h1 className='text-lg px-4 font-semibold mb-4'>Best of Air Max</h1>
+//         <div
+//           className="flex transition-transform duration-500 "
+          
+//         >
+//           {products.map((item) => (
+//             <div
+//               key={item.id}
+//               className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+//             >
+//               <div className="bg-white shadow-md rounded-lg">
+//                 <Image
+//                   src={item.image}
+//                   alt={item.title}
+//                   height={256}
+//                   width={100}
+                  
+//                   className="w-full h-64 object-cover"
+//                 />
+//                 <div className=" flex justify-between mx-2 mt-2">
+//                   <h3 className="text-sm md:text-lg font-medium text-gray-800">
+//                     {item.title}
+//                     <p className='font-semibold text-sm'>{item.category}</p>
+//                   </h3>
+                        
+//                   <p className="font-semibold text-sm">{item.price} €</p>
+//                 </div>
+//               </div>
+//             </div>
+//           ))}
+//         </div>
+//       </div>
+//       <div className="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full px-4">
+//         <button
+//           onClick={handlePrevious}
+//           className="bg-white rounded-full   hover:bg-gray-200 focus:outline-none"
+//         >
+//           <FaChevronLeft className="h-6 w-6 text-gray-800" />
+//         </button>
+//         <button
+//           onClick={handleNext}
+//           className="bg-white rounded-full  mr-20 hover:bg-gray-200 focus:outline-none"
+//         >
+//           <FaChevronRight className="h-6 w-6 text-gray-800 " />
+//         </button>
+//       </div>
+//     </div>
+//   );
+// }
+
+// export default JordanSlider
+
+
+
+
+
+
+
 "use client"
 import React, { useState } from 'react';
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
@@ -8,109 +145,128 @@ const products = [
     id: 1,
     image: '/j1.png',
     title: 'Nike Dri-FIT ADV TechKnit Ultra',
-    price: '$39.95',
-    category: 'Men\'s Short-Sleeve Running Top',
+    price: 39.95,
+    gender: 'Men\'s Running',
   },
   {
     id: 2,
-    image: '/j2.png',
+    image: '/Rectangle (5).png',
     title: 'Nike Dri-FIT Challenger',
-    price: '$24.95',
-    category: 'Men\'s 7" Lined Shorts',
+    price: 24.95,
+    gender: 'Men\'s Running',
   },
   {
     id: 3,
-    image: '/j3.png',
+    image: '/Rectangle (7).png',
     title: 'Nike Dri-FIT ADV Run Division',
-    price: '$52.95',
-    category: 'Women\'s Long-Sleeve Running Top',
+    price: 52.95,
+    gender: 'Women\'s Running',
   },
   {
     id: 4,
-    image: '/j4.png',
+    image: '/Rectangle (10).png',
     title: 'Nike Fast',
-    price: '$37.95',
-    category: 'Women\'s Mid-Rise/7/8 Running Leggings with Pockets',
-  },{
+    price: 37.95,
+    gender: 'Women\'s Running',
+  },
+  {
     id: 5,
-    image: '/j1.png',
+    image: '/Rectangle (11).png',
     title: 'Nike Dri-FIT ADV TechKnit Ultra',
-    price: '$39.95',
-    category: 'Men\'s Short-Sleeve Running Top',
+    price: 39.95,
+    gender: 'Men\'s Running',
   },
   {
     id: 6,
-    image: '/j2.png',
+    image: '/Rectangle (15).png',
     title: 'Nike Dri-FIT Challenger',
-    price: '$24.95',
-    category: 'Men\'s 7" Lined Shorts',
+    price: 24.95,
+    gender: 'Men\'s Running',
   },
   {
     id: 7,
-    image: '/j3.png',
+    image: '/Rectangle (19).png',
     title: 'Nike Dri-FIT ADV Run Division',
-    price: '$52.95',
-    category: 'Women\'s Long-Sleeve Running Top',
+    price: 52.95,
+    gender: 'Women\'s Running',
   },
   {
     id: 8,
-    image: '/j4.png',
+    image: '/Rectangle.png',
     title: 'Nike Fast',
-    price: '$37.95',
-    category: 'Women\'s Mid-Rise/7/8 Running Leggings with Pockets',
+    price: 37.95,
+    gender: 'Women\'s Running',
+  },  {
+    id: 9,
+    image: '/Rectangle (20).png',
+    title: ' Fast',
+    price: 38.95,
+    gender: 'Women\'s Running',
   },
 ];
 
-const JordanSlider: React.FC = () => {
+const JordanSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? products.length - 1 : prevIndex - 1
+      prevIndex === 0 ? products.length - 3 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === products.length - 1 ? 0 : prevIndex + 1
+      prevIndex >= products.length - 3 ? 0 : prevIndex + 1
     );
   };
 
   return (
-    <div className="relative">
-      <div className="flex overflow-x-auto snap-x snap-mandatory -mx-4">
-        {products.map((product, index) => (
-          <div
-            key={product.id}
-            className={`flex-shrink-0 w-full md:w-1/2 lg:w-1/4 px-4 snap-center ${
-              index === currentIndex ? 'opacity-100' : 'opacity-50'
-            }`}
-          >
-            <div className="bg-white shadow-md rounded-lg overflow-hidden">
-              <Image src={product.image} alt={product.title} height={256}  width={150} className="w-full h-64 object-cover" />
-              <div className="p-4">
-                <h3 className="text-lg font-medium">{product.title}</h3>
-                <p className="text-gray-500">{product.category}</p>
-                <p className="text-lg font-medium">{product.price}</p>
+    <div className="relative mt-10 px-10">
+      <div className="overflow-hidden">
+        <h1 className='text-lg px-4 font-semibold mb-4'>Best of Air Max</h1>
+        <div
+          className="flex transition-transform duration-500"
+          style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+        >
+          {products.map((item) => (
+            <div
+              key={item.id}
+              className="flex-shrink-0 w-full md:w-1/2 lg:w-1/3 px-4"
+            >
+              <div className="bg-white shadow-md rounded-lg">
+                <div className="relative w-full pt-[120%]">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="absolute inset-0 object-cover"
+                  />
+                </div>
+                <div className="flex justify-between mx-2 mt-2 p-2">
+                  <h3 className="text-sm md:text-lg font-medium text-gray-800">
+                    {item.title}
+                    <p className=' font-semibold text-sm text-gray-600'>{item.gender}</p>
+                  </h3>
+                  <p className="text-[12px] md:text-sm font-semibold ">{item.price.toFixed(2)}€</p>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
-
       <div className="absolute top-1/2 transform -translate-y-1/2 flex justify-between w-full px-4">
         <button
-          className="bg-white hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-full shadow"
           onClick={handlePrevious}
-        >
-          <FaChevronLeft className="h-6 w-6" />
+          className="bg-white rounded-full p-2 hover:bg-gray-200 focus:outline-none"
+        >   
+          <FaChevronLeft className="h-6 w-6 text-gray-800" />
         </button>
         <button
-          className="bg-white hover:bg-gray-200 text-gray-800 font-bold py-2 px-4 rounded-full shadow"
           onClick={handleNext}
+          className="bg-white rounded-full p-2 hover:bg-gray-200 focus:outline-none mr-20"
         >
-          <FaChevronRight className="h-6 w-6" />
+          <FaChevronRight className="h-6 w-6 text-gray-800" />
         </button>
       </div>
     </div>

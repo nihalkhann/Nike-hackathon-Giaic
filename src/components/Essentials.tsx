@@ -1,7 +1,5 @@
-import React from 'react';
 import Image from "next/image";
-const Essentials = () => {
-  const essentials = [
+const essentials = [
     {
       category: 'Men\'s',
       items: ['Air Force 1', 'Huarache', 'Air Max 95'],
@@ -19,39 +17,21 @@ const Essentials = () => {
       items: ['Infant & Toddler Shoes', 'Kids\' Shoes', 'Kids\' Jordan Shoes', 'Kids\' Basketball Shoes'],
     },
   ];
-
+export default function Essential() {
   return (
-    <div className="bg-white mt-auto  py-8 sm:py-12 lg:py-16">
-          <h1>The Essentials</h1>
-          <div className='flex flex-col-3 px-6 gap-2'>
-              <Image
-                  src="/Image (10).png"
-                  height={540}
-                  width={440}    
-                  alt='pic'
-                  >
-              </Image>
-              <Image
-                  src="/Image (11).png"
-                  height={540}
-                  width={440}    
-                  alt='pic'
-                  >
-              </Image>
-              <Image
-                  src="/Image (12).png"
-                  height={540}
-                  width={440}    
-                  alt='pic'
-                  >
-              </Image>
-                  
-                  
-          </div>
-      <div className="container mx-auto mt-5 px-4 sm:px-6 lg:px-8">
+    <section className="m-4" >
+      <div>
+        <h2 className="font-semibold text-xl py-5"> The Essentials</h2>
+      </div>
+      <div className="flex justify-evenly flex-wrap gap-5">
+        <Image width={300} height={300} alt="" src={"/e1.png"} />
+        <Image width={300} height={300} alt="" src={"/e2.png"} />
+        <Image width={300} height={300} alt="" src={"/e3.png"} />
+      </div>
+       <div className="container mx-auto mt-5 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 sm:gap-10 lg:gap-12">
           {essentials.map((essential, index) => (
-              <div key={index} className="flex flex-col items-center">
+              <div key={index} className="flex flex-col text-center justify-evenly">
 
               <h3 className="text-lg font-bold mb-2">{essential.category}</h3>
               <ul className="space-y-1">
@@ -64,9 +44,7 @@ const Essentials = () => {
             </div>
           ))}
         </div>
-      </div>
-    </div>
+        </div>
+    </section>
   );
-};
-
-export default Essentials;
+}
