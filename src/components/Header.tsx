@@ -234,7 +234,7 @@ const Header: React.FC = () => {
 
       {/* Bottom Popup Section */}
       {showPopup && (
-        <div className="hidden md:flex ml-96 bg-white py-4 px-6  justify-between items-center">
+        <div className="hidden md:flex ml-96 bg-gray-white py-4 px-6  justify-between items-center">
           <div className="text-gray-600 md:text-center text-sm">
             <h1 className="font-bold text-black text-center">Hello Nike App</h1>
             <p>
