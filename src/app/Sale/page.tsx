@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import { BiCategory } from 'react-icons/bi';
 import More from '@/components/More';
 
 // Product data
